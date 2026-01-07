@@ -1,0 +1,27 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "Application to display information relating to current events in Embark's Arc Raiders",
+  "license": "MIT",
+  "author": "Mateo Vargas",
+  "type": "module",
+  "main": "server.ts",
+  "scripts": {
+    "start": "node --exec node --loader ts-node/esm server.ts",
+    "server": "nodemon --exec node --loader ts-node/esm server.ts",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "dependencies": {
+    "body-parser": "^2.2.1",
+    "concurrently": "^9.2.1",
+    "express": "^5.2.1",
+    "nodemon": "^3.1.11"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
