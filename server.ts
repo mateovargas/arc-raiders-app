@@ -2,6 +2,8 @@ import express, { Request, Response } from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
+import ardbRoutes from "./routes/ardb/index.ts";
+
 // Recreate __filename and __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -12,6 +14,7 @@ const app = express();
 app.set("trust proxy", 1);
 
 app.use(express.json());
+app.use("/api/ardb", ardbRoutes);
 
 if (process.env.NODE_ENV === "production") {
     app.use(
@@ -27,7 +30,7 @@ if (process.env.NODE_ENV === "production") {
 
 const PORT = process.env.PORT
     ? Number(process.env.PORT)
-    : 6000;
+    : 5001;
 
 app.get("/health", (_req, res) => {
     res.status(200).send("ok");
