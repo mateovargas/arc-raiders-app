@@ -1,19 +1,20 @@
-import ardbGet from "./ardbClient.ts"
-import { Item } from "./types.ts";
+import { Item } from "../types.ts";
+import getClient from "../getClient.ts";
+import { API_BASE_URL } from "./const.ts";
 
-const getAllItems = async () => {
-    return ardbGet("items");
+export const getAllItems = async () => {
+    return getClient("items", API_BASE_URL);
 }
 
-const getItemById = async (itemId: string) => {
+export const getItemById = async (itemId: string) => {
     if (!itemId) {
         throw new Error("itemId is required");
     }
 
-    return ardbGet(`items/${itemId}`);
+    return getClient(`items/${itemId}`, API_BASE_URL);
 }
 
-const findItemsByNameContains = async (query: string) => {
+export const findItemsByNameContains = async (query: string) => {
     const normalizedQuery = String(query || "").trim().toLowerCase();
     if (!normalizedQuery) {
         return [];
@@ -25,9 +26,3 @@ const findItemsByNameContains = async (query: string) => {
         return name.includes(normalizedQuery);
     });
 }
-
-export {
-    getAllItems,
-    getItemById,
-    findItemsByNameContains
-};

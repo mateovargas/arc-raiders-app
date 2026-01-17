@@ -1,19 +1,19 @@
-import ardbGet from "./ardbClient.ts"
-import { Arc } from "./types.ts";
+import getClient from "../getClient.ts";
+import { Arc } from "../types.ts";
+import { API_BASE_URL } from "./const.ts";
 
-const getAllArc = async () => {
-    return ardbGet("arc-enemies");
+export const getAllArc = async () => {
+    return getClient("arc-enemies", API_BASE_URL);
 }
 
-const getArcById = async (arcId: string) => {
+export const getArcById = async (arcId: string) => {
     if (!arcId) {
         throw new Error("arcId is required");
     }
-
-    return ardbGet(`arc-enemies/${arcId}`);
+    return getClient(`arc-enemies/${arcId}`, API_BASE_URL);
 }
 
-const findArcByNameContains = async (query: string) => {
+export const findArcByNameContains = async (query: string) => {
     const normalizedQuery = String(query || "").trim().toLowerCase();
     if (!normalizedQuery) {
         return [];
@@ -25,9 +25,3 @@ const findArcByNameContains = async (query: string) => {
         return name.includes(normalizedQuery);
     });
 }
-
-export {
-    getAllArc,
-    getArcById,
-    findArcByNameContains
-};

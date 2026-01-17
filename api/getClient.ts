@@ -1,9 +1,9 @@
 import { buildURL } from "../utils/buildURL.ts";
 
-const ardbGet = async (path: string) => {
-    const url = buildURL(path, "https://ardb.app/api/");
+const getData = async (path: string, baseURL: string) => {
+    const url = buildURL(path, baseURL);
 
-    console.log(`ARDB GET: ${url}`);
+    console.log(`GET: ${url}`);
 
     const res = await fetch(url, {
         method: "GET",
@@ -15,11 +15,11 @@ const ardbGet = async (path: string) => {
     if (!res.ok) {
         const bodyText = await res.text().catch(() => "");
         throw new Error(
-            `ARDB request failed: ${res.status} ${res.statusText} url=${url} body=${bodyText}`
+            `Request failed: ${res.status} ${res.statusText} url=${url} body=${bodyText}`
         );
     }
 
     return res.json();
 }
 
-export default ardbGet;
+export default getData;

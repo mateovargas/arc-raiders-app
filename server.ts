@@ -3,6 +3,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 
 import ardbRoutes from "./routes/ardb/index.ts";
+import metaforgeRoutes from "./routes/metaforge/index.ts";
 
 // Recreate __filename and __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);
@@ -15,6 +16,7 @@ app.set("trust proxy", 1);
 
 app.use(express.json());
 app.use("/api/ardb", ardbRoutes);
+app.use("/api/metaforge", metaforgeRoutes);
 
 if (process.env.NODE_ENV === "production") {
     app.use(

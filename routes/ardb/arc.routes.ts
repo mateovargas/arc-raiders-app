@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAllArc, getArcById } from "../../api/ardbArcClient.ts";
+import { getAllArc, getArcById } from "../../api/ardb/ardbArcClient.ts";
 import { Arc } from "../../api/types.ts";
 
 const router = Router();

@@ -1,0 +1,1 @@
+export const API_BASE_URL = "https://metaforge.app/api/arc-raiders/"

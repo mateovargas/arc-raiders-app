@@ -1,5 +1,5 @@
 import { Router } from "express";
-import { getAllItems, getItemById } from "../../api/ardbItemClient.ts";
+import { getAllItems, getItemById } from "../../api/ardb/ardbItemClient.ts";
 import { Item } from "../../api/types.ts";
 
 const router = Router();
