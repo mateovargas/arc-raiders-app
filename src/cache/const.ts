@@ -1,6 +1,6 @@
 import { LRUCache as LRU } from "lru-cache";
 
-import { CacheValue } from "./types.js";
+import { CacheValue } from "./types.ts";
 
 /**
  * Global in memory cache instance
