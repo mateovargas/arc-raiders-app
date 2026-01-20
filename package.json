@@ -9,7 +9,6 @@
   "scripts": {
     "build": "tsc",
     "start": "node dist/server.js",
-    "start:dev": "node --exec node --loader ts-node/esm server.ts",
     "server": "nodemon --exec node --loader ts-node/esm server.ts",
     "client": "npm run dev --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
