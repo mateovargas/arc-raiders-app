@@ -23,10 +23,8 @@ if (process.env.NODE_ENV === "production") {
         express.static(path.resolve(__dirname, "client", "dist"))
     );
 
-    app.get("*", (_req: Request, res: Response) => {
-        res.sendFile(
-            path.resolve(__dirname, "client", "dist", "index.html")
-        );
+    app.get(/.*/, (req, res) => {
+        res.sendFile(path.join(__dirname, "public", "index.html"));
     });
 }
 
