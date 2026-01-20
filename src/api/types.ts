@@ -55,6 +55,24 @@ export type ItemType =
     | 'Weapon'
     | 'Ammunition'
 
+export type MapData = MapDataPoint[]
+
+export type MapDataPoint = {
+    id: string
+    lat: number
+    lng: number
+    zlayers: number
+    mapID: string
+    category: string
+    subcategory: string
+    instanceName: string
+    added_by: string
+    behindLockedDoor: boolean
+    last_edited_by: string
+    updated_at: string
+    eventConditionMask: number
+    lootAreas: string[] | null
+}
 export type MapName =
     | 'Spaceport'
     | 'Blue Gate'
