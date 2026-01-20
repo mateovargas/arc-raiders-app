@@ -1,8 +1,8 @@
 import { Router } from 'express';
 
-import { getMapData } from '../../api/metaforge/mapsClient.ts';
-import { getOrFetch, makeCacheKey } from '../../cache/lru.ts';
-import { MapData } from '../../api/types.ts';
+import { getMapData } from '../../api/metaforge/mapsClient.js';
+import { getOrFetch, makeCacheKey } from '../../cache/lru.js';
+import { MapData } from '../../api/types.js';
 
 const router = Router();
 

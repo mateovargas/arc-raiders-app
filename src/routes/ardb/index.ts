@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import arcRoutes from "./arc.routes.ts";
-import itemsRoutes from "./items.routes.ts";
-import questRoutes from "./quests.routes.ts";
+import arcRoutes from "./arc.routes.js";
+import itemsRoutes from "./items.routes.js";
+import questRoutes from "./quests.routes.js";
 
 const router = Router();
 

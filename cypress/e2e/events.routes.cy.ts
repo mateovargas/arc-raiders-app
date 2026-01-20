@@ -1,4 +1,4 @@
-import type { ArcEvent, EventsResponse } from "../../src/api/types.ts"
+import type { ArcEvent, EventsResponse } from "../../src/api/types.js"
 
 const API_PREFIX = (Cypress.env("METAFORGE_PREFIX") as string) || "/api/metaforge"
 

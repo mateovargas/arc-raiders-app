@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { getAllItems, getItemById } from "../../api/ardb/ardbItemClient.ts";
-import { Item } from "../../api/types.ts";
-import { getOrFetch, makeCacheKey } from "../../cache/lru.ts";
+import { getAllItems, getItemById } from "../../api/ardb/ardbItemClient.js";
+import { Item } from "../../api/types.js";
+import { getOrFetch, makeCacheKey } from "../../cache/lru.js";
 
 const router = Router();
 

@@ -1,12 +1,11 @@
-import type { TraderCatalogResponse, TraderItem } from "../../src/api/types.ts"
-
-const API_PREFIX = (Cypress.env("METAFORGE_PREFIX") as string) || "/api/metaforge"
+import type { TraderCatalogResponse, TraderItem } from "../../src/api/types.js"
+import { MF_API_PREFIX } from "./const.js"
 
 describe("Metaforge trader routes", () => {
     it("GET /traders returns trader catalog with expected shape", () => {
         cy.request<TraderCatalogResponse>({
             method: "GET",
-            url: `${API_PREFIX}/traders`,
+            url: `${MF_API_PREFIX}/traders`,
             failOnStatusCode: false,
         }).then((res) => {
             expect(res.status).to.eq(200)
@@ -19,7 +18,7 @@ describe("Metaforge trader routes", () => {
     it("GET /traders/:name returns the matching trader array using Apollo", () => {
         cy.request<TraderItem[]>({
             method: "GET",
-            url: `${API_PREFIX}/traders/${encodeURIComponent("Apollo")}`,
+            url: `${MF_API_PREFIX}/traders/${encodeURIComponent("Apollo")}`,
             failOnStatusCode: false,
         }).then((res) => {
             expect(res.status).to.eq(200)

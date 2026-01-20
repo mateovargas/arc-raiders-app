@@ -1,6 +1,6 @@
-import getClient from "../getClient.ts";
-import { Arc } from "../types.ts";
-import { API_BASE_URL } from "./const.ts";
+import getClient from "../getClient.js";
+import { Arc } from "../types.js";
+import { API_BASE_URL } from "./const.js";
 
 export const getAllArc = async () => {
     return getClient("arc-enemies", API_BASE_URL);

@@ -1,6 +1,6 @@
-import getClient from "../getClient.ts";
-import { Quest } from "../types.ts";
-import { API_BASE_URL } from "./const.ts";
+import getClient from "../getClient.js";
+import { Quest } from "../types.js";
+import { API_BASE_URL } from "./const.js";
 
 export const getAllQuests = async () => {
     return getClient("quests", API_BASE_URL);

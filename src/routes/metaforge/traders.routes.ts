@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { getAllTraders } from "../../api/metaforge/tradersClient.ts";
-import { TraderCatalogResponse, TraderItem } from "../../api/types.ts";
-import { getOrFetch, makeCacheKey } from "../../cache/lru.ts";
+import { getAllTraders } from "../../api/metaforge/tradersClient.js";
+import { TraderCatalogResponse, TraderItem } from "../../api/types.js";
+import { getOrFetch, makeCacheKey } from "../../cache/lru.js";
 
 const router = Router();
 

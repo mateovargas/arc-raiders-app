@@ -1,5 +1,5 @@
-import { CacheValue } from "./types.ts";
-import { upstreamCache } from "./const.ts";
+import { CacheValue } from "./types.js";
+import { upstreamCache } from "./const.js";
 
 /**
  * Creates a stable, deterministic cache key.

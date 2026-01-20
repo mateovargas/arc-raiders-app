@@ -1,4 +1,4 @@
-import { buildURL } from "../utils/buildURL.ts";
+import { buildURL } from "../utils/buildURL.js";
 
 const getData = async (path: string, baseURL: string) => {
     const url = buildURL(path, baseURL);

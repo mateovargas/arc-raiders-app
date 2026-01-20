@@ -1,5 +1,5 @@
-import { Quest } from "../../src/api/types.ts"
-import { ARDB_API_PREFIX } from "./const.ts"
+import { Quest } from "../../src/api/types.js"
+import { ARDB_API_PREFIX } from "./const.js"
 
 describe("ARDB quest routes", () => {
     it("GET /quests returns an array of quests with expected shape", () => {

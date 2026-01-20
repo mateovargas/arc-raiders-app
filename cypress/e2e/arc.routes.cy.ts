@@ -1,5 +1,5 @@
-import { Arc } from "../../src/api/types.ts"
-import { ARDB_API_PREFIX } from "./const.ts"
+import { Arc } from "../../src/api/types.js"
+import { ARDB_API_PREFIX } from "./const.js"
 
 describe("ARDB arc routes", () => {
     it("GET /arc returns an array of arc enemies with expected shape", () => {

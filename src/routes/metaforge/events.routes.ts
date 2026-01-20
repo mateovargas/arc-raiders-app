@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { getAllEventsSchedule } from "../../api/metaforge/eventsClient.ts";
-import { ArcEvent, EventsResponse } from "../../api/types.ts";
-import { getOrFetch, makeCacheKey } from "../../cache/lru.ts";
+import { getAllEventsSchedule } from "../../api/metaforge/eventsClient.js";
+import { ArcEvent, EventsResponse } from "../../api/types.js";
+import { getOrFetch, makeCacheKey } from "../../cache/lru.js";
 
 const router = Router();
 

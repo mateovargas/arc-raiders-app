@@ -2,8 +2,8 @@ import express, { Request, Response } from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 
-import ardbRoutes from "./src/routes/ardb/index.ts";
-import metaforgeRoutes from "./src/routes/metaforge/index.ts";
+import ardbRoutes from "./src/routes/ardb/index.js";
+import metaforgeRoutes from "./src/routes/metaforge/index.js";
 
 // Recreate __filename and __dirname in ESM
 const __filename = fileURLToPath(import.meta.url);

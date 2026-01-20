@@ -1,6 +1,6 @@
-import { Item } from "../types.ts";
-import getClient from "../getClient.ts";
-import { API_BASE_URL } from "./const.ts";
+import { Item } from "../types.js";
+import getClient from "../getClient.js";
+import { API_BASE_URL } from "./const.js";
 
 export const getAllItems = async () => {
     return getClient("items", API_BASE_URL);

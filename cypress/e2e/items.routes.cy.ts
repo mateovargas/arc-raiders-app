@@ -1,5 +1,5 @@
-import { Item } from "../../src/api/types.ts"
-import { ARDB_API_PREFIX } from "./const.ts"
+import { Item } from "../../src/api/types.js"
+import { ARDB_API_PREFIX } from "./const.js"
 
 describe("ARDB item routes", () => {
     it("GET /items returns an array of items with expected shape", () => {

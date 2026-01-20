@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { getAllQuests, getQuestById } from "../../api/ardb/ardbQuestClient.ts";
-import { Quest } from "../../api/types.ts";
-import { getOrFetch, makeCacheKey } from "../../cache/lru.ts";
+import { getAllQuests, getQuestById } from "../../api/ardb/ardbQuestClient.js";
+import { Quest } from "../../api/types.js";
+import { getOrFetch, makeCacheKey } from "../../cache/lru.js";
 
 const router = Router();
 

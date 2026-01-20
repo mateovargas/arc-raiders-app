@@ -1,5 +1,5 @@
-import getClient from "../getClient.ts";
-import { API_BASE_URL_MAPS } from "./const.ts";
+import getClient from "../getClient.js";
+import { API_BASE_URL_MAPS } from "./const.js";
 
 
 //https://metaforge.app/api/game-map-data?tableID=arc_map_data&mapID=dam

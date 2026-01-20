@@ -1,8 +1,8 @@
 import { Router } from "express";
 
-import { getAllArc, getArcById } from "../../api/ardb/ardbArcClient.ts";
-import { Arc } from "../../api/types.ts";
-import { getOrFetch, makeCacheKey } from "../../cache/lru.ts";
+import { getAllArc, getArcById } from "../../api/ardb/ardbArcClient.js";
+import { Arc } from "../../api/types.js";
+import { getOrFetch, makeCacheKey } from "../../cache/lru.js";
 
 const router = Router();
 

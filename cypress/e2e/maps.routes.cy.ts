@@ -1,6 +1,6 @@
 // cypress/e2e/maps.routes.cy.ts
-import type { MapData, MapDataPoint } from "../../src/api/types.ts"
-import { MF_API_PREFIX } from "./const.ts"
+import type { MapData, MapDataPoint } from "../../src/api/types.js"
+import { MF_API_PREFIX } from "./const.js"
 
 describe("Metaforge map routes", () => {
     it("GET /maps/:name returns { allData } where allData is MapDataPoints[] for dam", () => {
