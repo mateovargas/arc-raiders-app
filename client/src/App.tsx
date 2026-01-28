@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header/Header"
 import Home from "./pages/Home";
 import About from "./pages/About/About";
+import Arc from "./pages/Arc/Arc";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path='/about' element={<About />} />
+          <Route path='/arc' element={<Arc />} />
           {/* other routes */}
         </Routes>
       </main>
